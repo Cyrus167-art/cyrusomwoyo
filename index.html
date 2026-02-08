@@ -1,34 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Website</title>
+    <title>Cyrus OMWOYO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
-            font-family: Arial;
-            text-align: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
             background: #f4f4f4;
-            padding-top: 50px;
         }
-        h1 { color: #333; }
-        p { color: #666; }
-        button {
-            padding: 10px 20px;
-            border: none;
-            background: #0077ff;
+
+        /* ===== HEADER ===== */
+        header {
+            background: #222;
             color: white;
+            padding: 15px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== MAIN BODY ===== */
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Main content column */
+        .main-content {
+            flex: 3;
+            background: white;
+            padding: 20px;
             border-radius: 5px;
-            cursor: pointer;
+        }
+
+        .main-content img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Sidebar column */
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0077ff;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <h1>Hello, world 🌍</h1>
-    <p>This website is hosted on GitHub!</p>
+    <!-- HEADER -->
+    <header>
+        <h1>Cyrus Art</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-    <button onclick="alert('You clicked the button!')">
-        Click me
-    </button>
+    <!-- BODY -->
+    <div class="container">
+
+        <!-- MAIN COLUMN -->
+        <div class="main-content">
+            <h2>Welcome to My Website</h2>
+            <p>This is where your main content goes. You can write about your art, projects, or anything you want people to see first.</p>
+
+            <img src="https://via.placeholder.com/600x300" alt="Sample Image">
+
+            <p>You can add more text, more images, or even videos here.</p>
+        </div>
+
+        <!-- SIDEBAR COLUMN -->
+        <div class="sidebar">
+            <h3>More Information</h3>
+            <a href="#">My Portfolio</a>
+            <a href="#">Latest Projects</a>
+            <a href="#">Blog Posts</a>
+            <a href="#">Download CV</a>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Cyrus OMWOYO | All Rights Reserved</p>
+        <p>Email: your@email.com | Instagram: @yourhandle</p>
+    </footer>
 
 </body>
 </html>
+
