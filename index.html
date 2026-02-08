@@ -5,93 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-        }
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+    }
 
-        /* ===== HEADER ===== */
-        header {
-            background: #222;
-            color: white;
-            padding: 15px 20px;
-        }
+    /* Page wrapper to push footer down */
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-        header h1 {
-            margin: 0;
-        }
+    /* ===== HEADER ===== */
+    header {
+        background: #222;
+        color: white;
+        padding: 15px 20px;
+    }
 
-        nav {
-            margin-top: 10px;
-        }
+    nav {
+        margin-top: 10px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 15px;
-            font-weight: bold;
-        }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: bold;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    /* ===== MAIN BODY ===== */
+    .container {
+        flex: 1;  /* THIS makes the body stretch */
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+    }
 
-        /* ===== MAIN BODY ===== */
+    .main-content {
+        flex: 3;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .main-content img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+
+    .sidebar {
+        flex: 1;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .sidebar a {
+        display: block;
+        margin-bottom: 10px;
+        color: #0077ff;
+        text-decoration: none;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
         .container {
-            display: flex;
-            padding: 20px;
-            gap: 20px;
+            flex-direction: column;
         }
+    }
+</style>
 
-        /* Main content column */
-        .main-content {
-            flex: 3;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .main-content img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-
-        /* Sidebar column */
-        .sidebar {
-            flex: 1;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .sidebar a {
-            display: block;
-            margin-bottom: 10px;
-            color: #0077ff;
-            text-decoration: none;
-        }
-
-        .sidebar a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        /* ===== MOBILE RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 
 <body>
