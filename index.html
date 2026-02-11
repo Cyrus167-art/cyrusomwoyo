@@ -58,41 +58,51 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     /* ===== MAIN BODY ===== */
-    .container {
-        flex: 1;  /* THIS makes the body stretch */
-        display: flex;
-        padding: 7px 0;
-        gap: 7px;
-    }
+    /* ===== BIG WIDTH CONTROLLER ===== */
+.big-container {
+    max-width: 1100px;   /* controls total width */
+    margin: auto;        /* centers the container */
+    padding: 0 20px;     /* side breathing space */
+}
 
-    .main-content {
-        flex: 2;
-        min-width: 0;
-        background: lightblue;
-        padding: 7px;
-        border-radius: 5px;
-    }
+/* Section spacing */
+.page-section {
+    padding: 40px 0;
+}
 
-    .main-content img {
-        max-width: 100%;
-        border-radius: 5px;
+/* Layout of content + sidebar */
+.content-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;              /* stretches naturally */
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;         /* fixed, clean width */
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .content-layout {
+        flex-direction: column;
     }
 
     .sidebar {
-        flex: 1;
-        background: lightgrey;
-        padding: 5px;
-        border-radius: 5px;
+        width: 100%;
     }
-
-    .sidebar a {
-        flex: 1;
-        min-width: 250px;  /* prevents it from crushing */
-        display: block;
-        margin-bottom: 10px;
-        color: #0077ff;
-        text-decoration: none;
-    }
+}
 
     /* ===== FOOTER ===== */
     footer {
@@ -134,28 +144,30 @@
     </header>
 
     <!-- BODY -->
-    <div class="content-width container">
+<section class="page-section">
+    <div class="big-container">
 
-        <!-- MAIN COLUMN -->
-        <div class="main-content">
-            <h2>Welcome to My Website</h2>
-            <p>This is where your main content goes. You can write about your art, projects, or anything you want people to see first.</p>
+        <div class="content-layout">
 
-            <img src="https://via.placeholder.com/600x300" alt="Sample Image">
+            <main class="main-content">
+                <h2>Welcome to My Website</h2>
+                <p>This is where your main content goes.</p>
+                <img src="https://via.placeholder.com/600x300" alt="Sample Image">
+                <p>You can add more text, images, or videos here.</p>
+            </main>
 
-            <p>You can add more text, more images, or even videos here.</p>
-        </div>
+            <aside class="sidebar">
+                <h3>More Information</h3>
+                <a href="#">My Portfolio</a>
+                <a href="#">Latest Projects</a>
+                <a href="#">Blog Posts</a>
+                <a href="#">Download CV</a>
+            </aside>
 
-        <!-- SIDEBAR COLUMN -->
-        <div class="sidebar">
-            <h3>More Information</h3>
-            <a href="#">My Portfolio</a>
-            <a href="#">Latest Projects</a>
-            <a href="#">Blog Posts</a>
-            <a href="#">Download CV</a>
         </div>
 
     </div>
+</section>
 
     <!-- FOOTER -->
     <footer>
