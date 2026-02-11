@@ -7,6 +7,7 @@
 <style>
    html, body {
     height: 100%;
+    margin: 0;   /* removes default browser spacing */
 }
 
 .page-wrapper {
@@ -63,7 +64,10 @@
 
 /* Section spacing */
 .page-section {
-    padding: 8px 0;
+    .page-section {
+    padding-top: 8px;
+    padding-bottom: 0;
+
 }
 
 /* Layout of content + sidebar */
@@ -114,6 +118,23 @@
             flex-direction: column;
         }
     }
+    .sidebar-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.sidebar-list li {
+    margin-bottom: 8px;
+}
+
+.sidebar-list a {
+    text-decoration: none;
+    color: #0077ff;
+}
+
+.sidebar-list a:hover {
+    text-decoration: underline;
+}
 
 </style>
 
@@ -155,10 +176,12 @@
 
             <aside class="sidebar">
                 <h3>More Information</h3>
-                <a href="#">My Portfolio</a>
-                <a href="#">Latest Projects</a>
-                <a href="#">Blog Posts</a>
-                <a href="#">Download CV</a>
+                    <ul class="sidebar-list">
+                        <li><a href="#">My Portfolio</a></li>
+                        <li><a href="#">Latest Projects</a></li>
+                        <li><a href="#">Blog Posts</a></li>
+                        <li><a href="#">Download CV</a></li>
+                    </ul>
             </aside>
 
         </div>
