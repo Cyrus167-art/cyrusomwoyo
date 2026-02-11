@@ -5,25 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-    html, body {
-        height: 100%;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-    }
+   html, body {
+    height: 100%;
+}
 
-    /* Page wrapper to push footer down */
-    .page-wrapper {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-    .content-width {
-        flex: 1;
-        max-width: 1400px;   /* controls how wide the content can go */
-        margin: auto;        /* centers everything */
-        padding: 0 8px;     /* space left and right */
-    }
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full screen height */
+}
+
+/* This is your body section */
+.page-section {
+    flex: 1;   /* 👈 makes the body grow and push footer down */
+}
 
     /* ===== HEADER ===== */
     header {
