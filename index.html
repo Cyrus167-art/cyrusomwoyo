@@ -42,7 +42,7 @@
        .header-content {
            display: flex;
            align-items: center;
-           gap: 15px;
+           justify-content: space-between; /* pushes items apart */
     }
 
         .logo {
@@ -107,15 +107,20 @@
     <!-- HEADER -->
     <header>
         <div class="header-content">
+
+        <div class="header-text">
+            <h1>Cyrus Art</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+
         <img src="Logo.PNG2" alt="Site Logo" class="logo">
-        <div>
-        <h1>Cyrus Ongaga</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
-        </nav>
+
+    </div>
     </header>
 
     <!-- BODY -->
