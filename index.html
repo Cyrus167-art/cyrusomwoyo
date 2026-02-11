@@ -18,6 +18,11 @@
         flex-direction: column;
         min-height: 100vh;
     }
+    .content-width {
+        max-width: 1100px;   /* controls how wide the content can go */
+        margin: auto;        /* centers everything */
+        padding: 0 20px;     /* space left and right */
+    }
 
     /* ===== HEADER ===== */
     header {
@@ -108,7 +113,7 @@
 <div class="page-wrapper">
     <!-- HEADER -->
     <header>
-        <div class="header-content">
+        <div class="content-width header-content">
 
         <div class="header-text">
             <h1>Cyrus O. Ongaga, MSc</h1>
@@ -126,7 +131,7 @@
     </header>
 
     <!-- BODY -->
-    <div class="container">
+    <div class="content-width container">
 
         <!-- MAIN COLUMN -->
         <div class="main-content">
@@ -151,8 +156,10 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 ONGAGA, Cyrus Omwoyo | All Rights Reserved</p>
-        <p>Email: your@email.com | Instagram: @yourhandle</p>
+        <div class="content-width">
+            <p>© 2026 ONGAGA, Cyrus Omwoyo | All Rights Reserved</p>
+            <p>Email: your@email.com | Instagram: @yourhandle</p>
+        </div>
     </footer>
 </div>
 </body>
