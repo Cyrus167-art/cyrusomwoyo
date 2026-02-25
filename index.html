@@ -50,6 +50,7 @@
 }
     nav {
         margin-top: 10px;
+        flex-wrap: wrap;
     }
 
     nav a {
@@ -193,11 +194,14 @@
 @media (max-width: 768px) {
 
   .header-content {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
   }
-
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
   nav {
     display: none;
     flex-direction: column;
@@ -237,8 +241,8 @@
   }
 
   .logo {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
   }
 }
  
