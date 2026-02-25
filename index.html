@@ -59,6 +59,13 @@
             border: 3px solid white; /* optional clean border */
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
+     .tagline {
+  font-size: 14px;
+  font-style: normal;
+  color: #fff7a0;
+  margin-top: 5px;
+  line-height: 1.4;
+}
     /* ===== MAIN BODY ===== */
     /* ===== BIG WIDTH CONTROLLER ===== */
 .big-container {
@@ -158,6 +165,40 @@
   text-decoration: none;
   z-index: 9999;
 }
+    /* ===== MOBILE HEADER ===== */
+@media (max-width: 768px) {
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .menu-btn {
+    display: block;
+    background: white;
+    color: #026609;
+    padding: 6px 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+       .tagline {
+  font-size: 12px;
+}
 </style>
 </head>
 
@@ -169,6 +210,12 @@
 
         <div class="header-text">
             <h1>Cyrus O. Ongaga, MSc</h1>
+            <p class="tagline">
+Climate (Water–Energy–Agriculture Nexus) Researcher |
+Program Coordination (Communications & Knowledge Management) Expert |
+Aspiring PhD Researcher
+</p>
+            <div class="menu-btn" onclick="toggleMenu()">Menu ☰</div>
             <nav>
                 <a href="#">Home</a>
                 <a href="#">About</a>
@@ -222,6 +269,13 @@
 <a href="https://wa.me/254728250200" class="whatsapp-float" target="_blank">
     💬
 </a>
+    <script>
+function toggleMenu() {
+  const nav = document.querySelector("nav");
+  nav.style.display =
+    nav.style.display === "flex" ? "none" : "flex";
+}
+</script>
 </body>
 </html>
 
