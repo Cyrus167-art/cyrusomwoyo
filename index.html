@@ -145,14 +145,18 @@
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+
+  /* center with page */
+  left: 50%;
+  transform: translateX(600px); /* half of 1200px layout */
+
   background: #25D366;
   color: white;
   font-size: 28px;
   padding: 15px;
   border-radius: 50%;
   text-decoration: none;
-  z-index: 999;
+  z-index: 9999;
 }
 </style>
 </head>
