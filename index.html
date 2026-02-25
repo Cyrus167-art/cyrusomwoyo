@@ -84,6 +84,20 @@
        header {
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
+    .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  flex: 1;
+  min-width: 0;   /* allows shrinking */
+}
+
+.header-right {
+  flex-shrink: 0; /* image never drops */
+}
     /* ===== MAIN BODY ===== */
     /* ===== BIG WIDTH CONTROLLER ===== */
 .big-container {
@@ -248,7 +262,7 @@
     @media (max-width: 768px) {
 
   h1 {
-    font-size: 22px;   /* adjust until perfect */
+    font-size: 20px;   /* adjust until perfect */
     line-height: 1.2;
   }
 
