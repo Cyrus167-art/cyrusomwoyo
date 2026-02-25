@@ -133,6 +133,13 @@
         width: 100%;
     }
 }
+    .menu-btn {
+  display: none;   /* hide by default (laptop) */
+}
+    nav {
+  display: flex;
+  gap: 15px;
+}
 
     /* ===== FOOTER ===== */
     footer {
@@ -211,6 +218,13 @@
     cursor: pointer;
     font-weight: bold;
   }
+}
+    @media (max-width: 768px) {
+
+  .menu-btn {
+    display: block;   /* show only on phone */
+  }
+
 }
        .tagline {
   font-size: 12px;
