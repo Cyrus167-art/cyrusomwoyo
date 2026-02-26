@@ -378,11 +378,15 @@
 <a href="https://wa.me/254728250200" class="whatsapp-float" target="_blank">
     💬
 </a>
+    <div class="menu-btn" onclick="toggleMenu()">Menu ☰</div>
     <script>
 function toggleMenu() {
   const nav = document.querySelector("nav");
-  nav.style.display =
-    nav.style.display === "flex" ? "none" : "flex";
+  if (nav.style.display === "flex") {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+  }
 }
 </script>
 </body>
