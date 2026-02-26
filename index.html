@@ -204,6 +204,9 @@
   text-decoration: none;
   z-index: 9999;
 }
+    nav {
+  display: flex;
+}
     /* ===== MOBILE HEADER ===== */
 @media (max-width: 768px) {
 
@@ -295,6 +298,12 @@
  nav {
   margin-top: 5px;
   flex-wrap: wrap;
+}
+    @media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+  }
 }
 </style>
 </head>
